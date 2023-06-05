@@ -1,0 +1,146 @@
+.job-card {
+    /* padding-top: 2rem; */
+    box-shadow: 0 5px 0.5rem 0 #5ba4a450;
+}
+
+.job-card_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.job-card_left{
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--text-color-alt);
+}
+
+.job-card_image-container {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 4rem;
+    transform: translate(0, -50%);
+}
+
+.job-card_info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.job-card_top{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.job-card_company{
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.job-card_position:hover{
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+
+
+.job-card_info_labels{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.job-card_new,
+.job-card_featured
+{
+    padding: 0.5rem ;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-color-alt-second);
+    background-color: var(--bg-color-elements-first);
+    border-radius: 1rem;
+}
+
+.job-card_featured{
+    background-color: var(--bg-color-elements-second);
+}
+
+.job-card_position{
+    font-weight: bold;
+}
+
+.job-card_bottom{
+    display: flex;
+    gap: 1rem;
+    color: var(--text-color-alt);
+}
+
+.job-card_right_content{
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.job-card_label{
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--bg-color-elements-third);
+    border-radius: 0.25rem;
+}
+
+.job-card_label:hover{
+    cursor: pointer;
+    color: var(--text-color-alt-second);
+    background-color: var(--bg-color-elements-first);
+}
+
+.border::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0.4rem;
+    background-color: var(--bg-color-elements-first);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+
+@media screen and (min-width:60rem){
+
+    .job-card{
+        padding: 0;
+    }
+
+    .job-card_content{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .job-card_image-container{
+        position: static;
+        width: 4rem;
+        transform: none;
+    }
+
+    .job-card_left{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding-bottom: 0;
+        border: none;
+    }
+}

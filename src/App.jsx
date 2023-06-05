@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { useFetch } from "./hooks/useFetch";
 import { Filter } from "./components/Filter";
 import { ListJobs } from "./components/ListJobs";
+import { Header } from "./components/Header";
 
 function App() {
   let [filterData, setFilterData] = useState([]);
@@ -67,9 +69,10 @@ function App() {
   return (
     <>
       <main className="main">
-        <header className="header"></header>
-        <article className="main_content">
+        <Header>
           <Filter modifyData={modifyData} />
+        </Header>
+        <article className="main_content">
           <ListJobs dataRender={dataRender} modifyData={modifyData} />
         </article>
       </main>

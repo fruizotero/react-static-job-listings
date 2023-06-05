@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
+import "./FilterLabel.css";
 
 export function FilterLabel({ text, modifyData }) {
   let { deleteValue } = modifyData;

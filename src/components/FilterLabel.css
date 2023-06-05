@@ -1,0 +1,22 @@
+.label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    background-color: var(--bg-color-elements-third);
+}
+
+.label_name {
+    padding: 0rem 0.5rem;
+    font-weight: bold;
+}
+
+.label_button_image_container {
+    width: 1.5rem;
+    padding: 0.35rem;
+    background-color: var(--bg-color-elements-first);
+}
+
+.label_button_image_container:hover{
+    cursor: pointer;
+    background-color: #000;
+}

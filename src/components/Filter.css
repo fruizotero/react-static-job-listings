@@ -1,0 +1,40 @@
+.filter{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 1.5rem 1rem;
+    color: var(--text-color);
+    background-color: #fff;
+    border-radius: 0.25rem;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 1rem 0 #5ba4a450;
+    transition: all 0.5s ease-in-out;
+}
+
+.filter_clear{
+    color: var(--text-color-alt);
+    font-weight: bold;
+}
+
+.filter_clear:hover{
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.hidden-filter{
+    opacity: 0;
+    visibility: 0;
+    z-index: -1;
+}
+
+.filter_labels{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}

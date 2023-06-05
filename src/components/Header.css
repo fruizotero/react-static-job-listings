@@ -1,0 +1,6 @@
+
+.header{
+    position: relative;
+    background-color: var(--desatured-dark-cyan);
+    line-height: 0;
+}

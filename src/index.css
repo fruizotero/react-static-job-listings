@@ -1,0 +1,95 @@
+/* **********     Reset CSS     ********** */
+
+html {
+    --font: 'League Spartan', sans-serif;
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 16px;
+    scroll-behavior: smooth;
+    --filter-tablets: hsl(180, 31%, 95%);
+    --desatured-dark-cyan: hsl(180, 29%, 50%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+    --bg-color: hsl(180, 52%, 96%);
+    --text-color: var(--desatured-dark-cyan);
+    --text-color-alt:var(--dark-grayish-cyan);
+    --text-color-alt-second:#fff;
+    --bg-color-elements-first: var(--desatured-dark-cyan);
+    --bg-color-elements-second:var(--very-dark-grayish-cyan);
+    --bg-color-elements-third:var(--filter-tablets);
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button {
+    font-family: var(--font);
+    border: none;
+    appearance: none;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    margin-block: 0;
+    font-weight: 400;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.main{
+    min-height: 100vh;
+}
+
+.list-jobs{
+    padding: 2rem 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media screen and (min-width:60rem) {
+    
+    .list-jobs{
+        gap: 1rem;
+    }
+}
