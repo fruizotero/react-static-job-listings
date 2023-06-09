@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
+import bgHeaderDesktop from "../assets/images/bg-header-desktop.svg";
+import bgHeaderMobile from "../assets/images/bg-header-mobile.svg";
 
 import "./Header.css";
 
@@ -10,10 +12,10 @@ export function Header({children}) {
       <picture className="header_image">
         <source
           media="(min-width: 512px)"
-          srcSet="src/assets/images/bg-header-desktop.svg"
+          srcSet={bgHeaderDesktop}
         ></source>
         <img
-          src="src/assets/images/bg-header-mobile.svg"
+          src={bgHeaderMobile}
           alt="Background image header"
         />
       </picture>

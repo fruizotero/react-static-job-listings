@@ -4,11 +4,12 @@ import { useFetch } from "./hooks/useFetch";
 import { Filter } from "./components/Filter";
 import { ListJobs } from "./components/ListJobs";
 import { Header } from "./components/Header";
+import data from "./assets/data/data.json";
 
 function App() {
   let [filterData, setFilterData] = useState([]);
   let [dataRender, setDataRender] = useState([]);
-  let { data, isLoading, error } = useFetch("src/assets/data/data.json");
+  // let { data, isLoading, error } = useFetch("public/data.json");
 
   const deleteValue = (value) => {
     let newData = filterData.filter((el) => el.toLowerCase() != value.toLowerCase());

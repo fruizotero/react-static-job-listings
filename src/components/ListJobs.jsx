@@ -5,7 +5,6 @@ import { JobCard } from "./JobCard";
 
 export function ListJobs({ dataRender, modifyData }) {
   let { filterData } = modifyData;
-  // [].length
   let style = {
     paddingTop: filterData.length == 0 ? "3rem" : "12vh",
   };

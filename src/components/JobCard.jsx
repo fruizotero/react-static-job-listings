@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import "./JobCard.css";
 
 export function JobCard({ data, modifyData }) {
+  const [imgSrc, setImgSrc] = useState(null);
   let {
     company,
     logo,
@@ -20,12 +21,26 @@ export function JobCard({ data, modifyData }) {
   } = data;
   let { addValue } = modifyData;
 
+  useEffect(() => {
+    const getImage = async (name) => {
+      try {
+        let resp = await import(`../assets/images/${name}.svg`);
+
+        setImgSrc(resp.default);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getImage(logo);
+  }, [imgSrc]);
+
   return (
     <article className="job-card ">
       <div className={`job-card_content ${isNew && featured ? "border" : ""}`}>
         <div className="job-card_left">
           <div className="job-card_image-container">
-            <img src={logo} alt="Company logo" className="job-card_image" />
+            <img src={imgSrc} alt="Company logo" className="job-card_image" />
           </div>
           <div className="job-card_info">
             <div className="job-card_top">
